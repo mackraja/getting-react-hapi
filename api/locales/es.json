@@ -1,0 +1,47 @@
+{
+	"db": {
+		"error": "Ha ocurrido algún error en la base de datos"
+	},
+	"controllers": {
+		"session": {
+			"invalidUsername": "Nombre de usuario no válido",
+			"invalidPassword": "Contraseña no válida",
+			"invalidToken": "simbolo no valido",
+			"createUser": "Error: al crear usuario",
+			"payload": {
+				"username": "Ingrese su correo electrónico o nombre de usuario",
+				"password": "Introducir la contraseña"
+			}
+		},
+		"user": {
+			"query": {
+				"role_id": "PK de la tabla de roles",
+				"first_name": "Nombre del usuario",
+				"last_name": "Apellido del usuario",
+				"status": "1 = activo, 0 = inactivo (predeterminado)",
+				"username": "Nombre de usuario del usuario",
+				"password": "contraseña del usuario",
+				"email": "Correo electrónico del usuario, debe ser un correo electrónico",
+				"limit": "No introducir registros",
+				"sortBy": "FieldName de la tabla de usuario",
+				"order": "ASC o DESC"
+			},
+			"params": {
+				"id": "PK de tabla de usuario"
+			},
+			"deleteUser": "Error: al eliminar el usuario",
+			"updateUser": "Error: al actualizar el usuario",
+			"fetchUser": "Error: Mientras se enumera al usuario"
+		}
+	},
+	"plugins": {
+		"auth": {
+			"invalid": "sesión inválida o expirada",
+			"expired": "sesión expiró",
+			"missingToken": "Falta el token de autenticación",
+			"invalidToken": "El token de autenticación no es válido",
+			"missingApiKey": "Falta la clave api",
+			"keyExpired": "Tu clave de API expiró"
+		}
+	}
+}

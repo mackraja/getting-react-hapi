@@ -1,0 +1,47 @@
+{
+	"db": {
+		"error": "Some DB error has occurred"
+	},
+	"controllers": {
+		"session": {
+			"invalidUsername": "Invalid Username",
+			"invalidPassword": "Invalid Password",
+			"invalidToken": "Invalid Token",
+			"createUser": "Error: While creating user",
+			"payload": {
+				"username": "Enter Email or Username",
+				"password": "Enter Password"
+			}
+		},
+		"user": {
+			"query": {
+				"role_id": "PK of Role Table",
+				"first_name": "First Name of User",
+				"last_name": "Last Name of User",
+				"status": "1 = Active, 0 = Inactive (Default)",
+				"username": "Username of User",
+				"password": "Password of User",
+				"email": "Email of User, Must be an email",
+				"limit": "Enter no of records",
+				"sortBy": "FieldName of User Table",
+				"order": "ASC or DESC"
+			},
+			"params": {
+				"id": "PK of User Table"
+			},
+			"deleteUser": "Error: While deleting User",
+			"updateUser": "Error: While updating User",
+			"fetchUser": "Error: While listing User"
+		}
+	},
+	"plugins": {
+		"auth": {
+			"invalid": "Invalid or expired session",
+			"expired": "Session expired",
+			"missingToken": "Auth token is missing",
+			"invalidToken": "Auth token is not valid",
+			"missingApiKey": "Missing api key",
+			"keyExpired": "Your api key expired"
+		}
+	}
+}
