@@ -3,8 +3,8 @@
  */
 module.exports = {
   development: {
-    username: '',
-    password: '',
+    username: 'postgres',
+    password: 'Bohemia007',
     database: 'gettingStarted',
     host: 'localhost',
     dialect: 'postgres',
