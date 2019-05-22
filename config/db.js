@@ -5,9 +5,9 @@ module.exports = {
   development: {
     username: '',
     password: '',
-    database: 'gettingReact',
+    database: 'gettingStarted',
     host: 'localhost',
-    dialect: 'mysql',
+    dialect: 'postgres',
     connectionTimeout: 300000,
     requestTimeout: 300000,
     pool: {
@@ -21,22 +21,22 @@ module.exports = {
   test: {
     username: '',
     password: '',
-    database: 'gr_test',
+    database: '',
     host: 'localhost',
-    dialect: 'mysql',
+    dialect: 'postgres',
   },
   staging: {
     username: '',
     password: '',
-    database: 'gr_staging',
+    database: '',
     host: 'localhost',
-    dialect: 'mysql',
+    dialect: 'postgres',
   },
   production: {
-    username: '',
-    password: '',
-    database: 'gr_production',
-    host: 'localhost',
-    dialect: 'mysql',
+    username: 'flsunstohvjtrs',
+    password: '810548be41f34ecf0847ebb53be4cfccbfa4e9cacea83081ff6bd6a3cadddea0',
+    database: 'd3b3qj3j2rvm5',
+    host: 'ec2-54-163-230-199.compute-1.amazonaws.com',
+    dialect: 'postgres',
   },
 };
