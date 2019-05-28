@@ -1,2 +1,2 @@
 web: npm start
-queue: npm api
+api: npm api
