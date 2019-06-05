@@ -63,10 +63,10 @@ class App extends Component {
                     <Route path="/" name="Full" component={Full}/>
                   </Switch>
                 : <Switch>
-                    <Route path="/login" name="Login" component={Login}/>
+                    <Route exact path="/" name="Login" component={Login}/>
                     <Route path="/404" name="Page 404" component={Page404}/>
                     <Route path="/500" name="Page 500" component={Page500}/>
-                    <Route path="*" component={Login} />
+                    {/*<Route path="*" component={Login} />*/}
                   </Switch>
             }
         </BrowserRouter>

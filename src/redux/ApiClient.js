@@ -4,20 +4,21 @@
 import axios from 'axios';
 import { omitBy, isUndefined, isNull } from 'lodash';
 import store from 'store2';
+import config from '../config';
 
 const methods = ['get', 'post', 'put', 'patch', 'del'];
 
-function formatUrl(path) {
-  if (!path) {
-    return path;
-  }
-
-  if (/^(\/\/|http|https)/.test(path)) {
-    return path;
-  }
-  const adjustedPath = path[0] !== '/' ? `/${path}` : path;
-  return `${process.env.API_HOST}${adjustedPath}`;
-}
+// function formatUrl(path) {
+//   if (!path) {
+//     return path;
+//   }
+//
+//   if (/^(\/\/|http|https)/.test(path)) {
+//     return path;
+//   }
+//   const adjustedPath = path[0] !== '/' ? `/${path}` : path;
+//   return `${config.apiHost}${adjustedPath}`;
+// }
 
 export default class ApiClient {
   constructor(req) {
@@ -29,7 +30,7 @@ export default class ApiClient {
   _req = method => (path, { params, data, files } = {}) => new Promise((resolve, reject) => {
       const apiObj = {
           method,
-          url: formatUrl(path),
+          // url: formatUrl(path),
       };
 
       if (params) {
@@ -45,8 +46,8 @@ export default class ApiClient {
       }
 
       const http = axios.create ({
-          // baseURL: process.env.API_HOST,
-          // timeout: 5000,
+          baseURL: config.apiHost,
+          timeout: 5000,
           headers: {'Content-Type': 'application/json'},
       });
 

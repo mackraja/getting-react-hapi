@@ -21,9 +21,9 @@ const init = async () => {
 
   await server.start();
 
-  console.info('\n==> ✅  %s is running, talking to API server on port %s.', serverName, process.env.DB_PORT);
-  // console.info('==> 💻  Open http://%s:%s in a browser to view the app.', process.env.DB_HOST,
-  // process.env.DB_PORT);
+  console.info('\n==> ✅  %s is running, talking to API server on port %s.', serverName, process.env.DATABASE_PORT);
+  // console.info('==> 💻  Open http://%s:%s in a browser to view the app.', process.env.DATABASE_HOST,
+  // process.env.DATABASE_PORT);
   console.info('==> 💻  Open %s%s in a browser to view the api docs.\n\n', server.info.uri, '/documentation');
 };
 

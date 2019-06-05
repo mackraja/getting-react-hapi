@@ -73,8 +73,8 @@ const goodOptions = {
 };
 
 const connections = {
-  host: process.env.DB_HOST,
-  port: process.env.DB_PORT,
+  host: process.env.DATABASE_HOST,
+  port: process.env.DATABASE_PORT,
   routes: {
     cors: corsHeaders,
     files: {
