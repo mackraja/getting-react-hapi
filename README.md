@@ -30,3 +30,7 @@
 ##### Run Server: 
 
 * Using npm: npm api
+## Support on Beerpay
+Hey dude! Help me out for a couple of :beers:!
+
+[![Beerpay](https://beerpay.io/mackraja/getting-react/badge.svg?style=beer-square)](https://beerpay.io/mackraja/getting-react)  [![Beerpay](https://beerpay.io/mackraja/getting-react/make-wish.svg?style=flat-square)](https://beerpay.io/mackraja/getting-react?focus=wish)
