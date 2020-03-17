@@ -4,6 +4,7 @@
 import axios from 'axios';
 import { omitBy, isUndefined, isNull } from 'lodash';
 import store from 'store2';
+import config from "../config";
 
 const methods = ['get', 'post', 'put', 'patch', 'del'];
 
@@ -16,7 +17,7 @@ function formatUrl(path) {
     return path;
   }
   const adjustedPath = path[0] !== '/' ? `/${path}` : path;
-  return `${process.env.API_HOST}${adjustedPath}`;
+  return `${config.apiPath}${adjustedPath}`;
 }
 
 export default class ApiClient {
@@ -45,8 +46,8 @@ export default class ApiClient {
       }
 
       const http = axios.create ({
-          // baseURL: process.env.API_HOST,
-          // timeout: 5000,
+          baseURL: config.apiPath,
+          timeout: 5000,
           headers: {'Content-Type': 'application/json'},
       });
 

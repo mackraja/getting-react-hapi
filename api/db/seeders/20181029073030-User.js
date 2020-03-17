@@ -6,7 +6,7 @@ module.exports = {
     role_id: 1,
     first_name: 'Monty',
     last_name: 'Khanna',
-    status: 1,
+    status: true,
     username: 'mack',
     password: '$2b$10$4bheH69Z5c2LSX.KuNVmX.Oi2NjKl1QqHWQZCirJ6ImwQPBcIhuLu', // bohemia
     email: 'montykhanna007@hotmail.com',
@@ -17,7 +17,7 @@ module.exports = {
     role_id: 2,
     first_name: 'Nitesh',
     last_name: 'Kachroo',
-    status: 1,
+    status: true,
     username: 'nick',
     password: '$2b$10$4bheH69Z5c2LSX.KuNVmX.Oi2NjKl1QqHWQZCirJ6ImwQPBcIhuLu', // bohemia
     email: 'niteshkac@gmail.com',
@@ -28,7 +28,7 @@ module.exports = {
     role_id: 3,
     first_name: 'Harsimran',
     last_name: 'Singh',
-    status: 1,
+    status: true,
     username: 'simran',
     password: '$2b$10$4bheH69Z5c2LSX.KuNVmX.Oi2NjKl1QqHWQZCirJ6ImwQPBcIhuLu', // bohemia
     email: 'simr.web@gmail.com',

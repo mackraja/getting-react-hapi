@@ -63,9 +63,9 @@ module.exports = {
       allowNull: true
     },
     status: {
-      type: Sequelize.TINYINT,
+      type: Sequelize.BOOLEAN,
       allowNull: false,
-      defaultValue: 0,
+      defaultValue: false,
     },
     created_at: {
       allowNull: false,
