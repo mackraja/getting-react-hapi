@@ -6,13 +6,24 @@ import settings from 'config';
 
 const configuration = Object.assign({}, settings.db);
 
-const { database, username, password } = configuration;
+const { host, database, username, password, dialect } = configuration;
 
-delete configuration.database;
-delete configuration.username;
-delete configuration.password;
-
-const db = new Sequelize(database, username, password, configuration);
+let db;
+if (process.env.NODE_ENV === 'production' && process.env.DATABASE_URL) {
+    db = new Sequelize(process.env.DATABASE_URL,
+        {
+            dialect,
+            protocol: dialect
+        });
+} else {
+    db = new Sequelize({
+        dialect,
+        host,
+        database,
+        username,
+        password
+    });
+}
 
 db.models.User = db.import('./models/user');
 db.models.Role = db.import('./models/role');

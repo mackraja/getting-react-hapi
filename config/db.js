@@ -6,7 +6,7 @@ module.exports = {
     username: 'root',
     password: 'Bohemia00&',
     database: 'gettingStarted',
-    host: 'localhost',
+    host: '0.0.0.0',
     dialect: 'mysql',
     connectionTimeout: 300000,
     requestTimeout: 300000,
