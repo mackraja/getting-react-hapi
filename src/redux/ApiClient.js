@@ -47,7 +47,7 @@ export default class ApiClient {
 
       const http = axios.create ({
           baseURL: config.apiPath,
-          timeout: 5000,
+          timeout: 10000,
           headers: {'Content-Type': 'application/json'},
       });
 
