@@ -8,7 +8,14 @@ import { connections, registrations } from './manifest'; // eslint-disable-line
 import { authenticate } from './helpers'; // eslint-disable-line
 import { name as serverName } from '../package.json';
 
-const server = Hapi.server(connections);
+const dbPort = process.env.NODE_ENV === 'development' ? 4000 : process.env.PORT;
+
+const serverOptions = Object.assign({}, {
+  host: process.env.HOST,
+  port: dbPort
+}, connections);
+
+const server = Hapi.server(serverOptions);
 
 const healthCheck = async () => {
   await authenticate.checkDbConnection();
@@ -21,7 +28,7 @@ const init = async () => {
 
   await server.start();
 
-  console.info('\n==> ✅  %s is running, talking to API server on port %s.', serverName, process.env.PORT);
+  console.info('\n==> ✅  %s is running, talking to API server on port %s.', serverName, dbPort);
   
   console.info('==> 💻  Open %s%s in a browser to view the api docs.\n\n', server.info.uri, '/documentation');
 };

@@ -4,9 +4,15 @@
 import axios from 'axios';
 import { omitBy, isUndefined, isNull } from 'lodash';
 import store from 'store2';
-import config from "../config";
+import {} from 'dotenv/config';
 
 const methods = ['get', 'post', 'put', 'patch', 'del'];
+
+const apiPath = process.env.NODE_ENV === 'development'
+ ? 'http://0.0.0.0:' + process.env.REACT_APP_DB_PORT 
+ : 'https://0.0.0.0:' + process.env.REACT_APP_PORT ;
+
+console.log('env --------- ', apiPath);
 
 function formatUrl(path) {
   if (!path) {
@@ -17,7 +23,7 @@ function formatUrl(path) {
     return path;
   }
   const adjustedPath = path[0] !== '/' ? `/${path}` : path;
-  return `${config.apiPath}${adjustedPath}`;
+  return `${apiPath}${adjustedPath}`;
 }
 
 export default class ApiClient {
@@ -46,7 +52,7 @@ export default class ApiClient {
       }
 
       const http = axios.create ({
-          // baseURL: process.env.baseURL || config.apiPath,
+          baseURL: apiPath,
           timeout: 10000,
           headers: {'Content-Type': 'application/json'},
       });
