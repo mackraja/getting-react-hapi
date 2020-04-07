@@ -3,12 +3,11 @@
  */
 module.exports = {
   development: {
-    username: 'postgres',
-    password: 'Bohemia00(',
+    username: 'root',
+    password: 'Bohemia00&',
     database: 'gettingStarted',
     host: 'localhost',
-    dialect: 'postgres',
-    protocol: 'postgres',
+    dialect: 'mysql',
     connectionTimeout: 300000,
     requestTimeout: 300000,
     pool: {
@@ -34,10 +33,7 @@ module.exports = {
     dialect: 'postgres',
   },
   production: {
-    username: 'xgndhuvlvhdxcv',
-    password: '7384ca9daba26472cc3c2f44def7c5d445d11e0748ae52fa74008b8e3d52a96f',
-    database: 'de47auhf72j7sr',
-    host: 'ec2-18-235-97-230.compute-1.amazonaws.com',
-    dialect: 'postgres',
+    use_env_variable: "DATABASE_URL",
+    dialect: "postgres"
   },
 };
