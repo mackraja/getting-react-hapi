@@ -52,8 +52,7 @@ class App extends Component {
 
   render () {
     const { history, user } = this.props;
-    console.log('App user --------- ', user);
-
+    
     return (
       <ConnectedRouter history={history} >
         <BrowserRouter>

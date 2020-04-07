@@ -9,10 +9,10 @@ import {} from 'dotenv/config';
 const methods = ['get', 'post', 'put', 'patch', 'del'];
 
 const apiPath = process.env.NODE_ENV === 'development'
- ? 'http://0.0.0.0:' + process.env.REACT_APP_DB_PORT 
- : 'http://0.0.0.0:' + process.env.PORT ;
+ ? 'http://0.0.0.0:' + process.env.PORT | process.env.REACT_APP_DB_PORT 
+ : 'https://0.0.0.0:' + process.env.PORT ;
 
-console.log('env --------- ', process.env);
+console.log('apiPath --------- ', apiPath);
 
 function formatUrl(path) {
   if (!path) {

@@ -11,7 +11,6 @@ import { name as serverName } from '../package.json';
 const dbPort = process.env.NODE_ENV === 'development' ? 4000 : process.env.PORT;
 
 const serverOptions = Object.assign({}, {
-  host: process.env.HOST,
   port: dbPort
 }, connections);
 
