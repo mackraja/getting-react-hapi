@@ -13,7 +13,7 @@ import { i18n } from '../../helpers'; // eslint-disable-line
 const { User } = db.models;
 
 module.exports = {
-  auth: 'jwt', // jwt, session
+  auth: false, // jwt, session
 
   tags: ['api', 'User'],
 

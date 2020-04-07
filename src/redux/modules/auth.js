@@ -85,6 +85,7 @@ export const login = (data) => async (dispatch, getState, api) => {
     try {
         console.log('before calling api --- ', data);
         const res = await api.post('/v1/session', { data } );
+        console.log('after calling api --- ', res);
         const { token } = res;
         store('authToken', token);
 

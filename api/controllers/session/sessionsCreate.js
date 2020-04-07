@@ -43,6 +43,7 @@ module.exports = {
     let data = {};
 
     try {
+      console.log('before calling authenticate --- ', username);
       const user = await sessionService.authenticate(username);
       
       // Check User Exist or Not

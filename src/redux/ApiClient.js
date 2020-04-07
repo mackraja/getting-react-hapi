@@ -30,7 +30,7 @@ export default class ApiClient {
   _req = method => (path, { params, data, files } = {}) => new Promise((resolve, reject) => {
       const apiObj = {
           method,
-          // url: formatUrl(path),
+          url: formatUrl(path),
       };
 
       if (params) {
@@ -68,7 +68,7 @@ export default class ApiClient {
               resolve(response.data);
           })
           .catch((error) => {
-              console.log('Error: To call API');
+              console.log('Error: To call API', error);
               reject(error);
           });
   });
