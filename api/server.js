@@ -8,9 +8,10 @@ import { connections, registrations } from './manifest'; // eslint-disable-line
 import { authenticate } from './helpers'; // eslint-disable-line
 import { name as serverName } from '../package.json';
 
-const dbPort = process.env.NODE_ENV === 'development' ? 4000 : process.env.PORT;
+const dbPort = process.env.NODE_ENV === 'development' ? process.env.DB_PORT : process.env.PORT;
 
 const serverOptions = Object.assign({}, {
+  host: process.env.HOST,
   port: dbPort
 }, connections);
 
