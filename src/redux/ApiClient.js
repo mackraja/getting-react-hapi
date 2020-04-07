@@ -30,7 +30,7 @@ export default class ApiClient {
   _req = method => (path, { params, data, files } = {}) => new Promise((resolve, reject) => {
       const apiObj = {
           method,
-          url: formatUrl(path),
+          // url: formatUrl(path),
       };
 
       if (params) {
@@ -46,7 +46,7 @@ export default class ApiClient {
       }
 
       const http = axios.create ({
-          baseURL: config.apiPath,
+          // baseURL: process.env.baseURL || config.apiPath,
           timeout: 10000,
           headers: {'Content-Type': 'application/json'},
       });
