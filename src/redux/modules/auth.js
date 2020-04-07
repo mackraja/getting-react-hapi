@@ -83,6 +83,7 @@ export const load = (forced) => async (dispatch, getState, api) => {
 export const login = (data) => async (dispatch, getState, api) => {
     dispatch({ type: auth.LOGIN });
     try {
+        console.log('before calling api --- ', data);
         const res = await api.post('/v1/session', { data } );
         const { token } = res;
         store('authToken', token);
