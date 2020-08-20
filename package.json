@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
-    "bcrypt": "^3.0.6",
+    "bcrypt": "^5.0.0",
     "boom": "^7.3.0",
     "bootstrap": "^4.3.1",
     "chart.js": "^2.8.0",
